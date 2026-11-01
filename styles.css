@@ -22,6 +22,19 @@ nav {
     display: flex;
 }
 
+.nav__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.purple {
+    color: #7342d6;
+}
+
 img {
     width: 100%;
 }
@@ -38,13 +51,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.nav__container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-}
+
 
 
 .logo {
@@ -165,6 +172,19 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+h1 {
+    font-size: 56px;
+    color: #7342d6;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 .header__description {
