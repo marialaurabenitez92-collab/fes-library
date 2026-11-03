@@ -123,12 +123,16 @@ button:active {
     right: 0;
     bottom: 0;
     z-index: 100;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     visibility: hidden;
     opacity: 0;
     transform: translate(100%);
+}
+
+.menu--open .menu__backdrop {
+    display: flex;
 }
 
 .menu__links {
@@ -170,7 +174,7 @@ header {
 }
 
 .header__container {
-    padding: 24px;
+    padding: 108px;
     width: 100%;
     max-width: 720px;
     margin: 0 auto;
@@ -317,7 +321,7 @@ img {
 /* FEATURES */
 
 #features {
-    padding-top: 8vw;
+    padding-top: 12vw;
     background-color: rgba(115, 66, 214, 0.1);
 }
 
@@ -349,18 +353,20 @@ img {
 }
 
 .book__title {
+    color:black;
     font-size: 20px;
     margin-bottom: 8px;
 }
 
 .book__title:hover {
+    color:#242424;
     text-decoration: underline;
     cursor: not-allowed;
 }
 
 .book__ratings {
     margin-bottom: 8px;
-    color: #fabf2a;
+    color: #ebc20c;
 }
 
 .book__price--normal {

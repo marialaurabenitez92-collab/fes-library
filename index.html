@@ -7,9 +7,10 @@
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/705ee2e763.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
-<body>
+<body class="menu--open">
 
     <section id="landing">
         <nav>
@@ -21,10 +22,24 @@
                         <li><a href="#" class="nav__link">Contact</a></li>
                         <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
                     </ul>
-                </div>
+                    <button class="btn__menu" onclick="openMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="menu__backdrop">
+                        <button class="btn__menu btn__menu--close" onClick="closeMenu()"></button>
+                        <ul class="menu__links">
+                            <li class="menu__list">
+                                <a href="#" class="menu__link" onClick="closeMenu()">Home</a>
+                            </li>
+                            <li class="menu__list">
+                                <a href="#features" class="menu__link">Books</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link no cursor">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
         </nav>
-
-
 
         <header>
             <div class="header__container">
@@ -66,7 +81,7 @@
                             </h3>
                             <p class="highlight__para">Library has books in all your favorite categories.
                             </p>
-                         </div>
+                        </div>
 
                         <div class="highlight">
                             <div class="highlight__img">
@@ -86,39 +101,32 @@
         <section id="features">
             <dic class="container">
                 <div class="row">
+                    <h2 class="section__title">
+                        Featured <span class="purple">Books</span>
+                    </h2>
+                    <div class="books">
+                        <div class="book">
+                          <figure class="book__img--wrapper">
+                            <img class="book__img" src="./assets/crack the coding interview.png" alt="">
+                          </figure>
+                          <div class="book__title">Cracking the Coding Interview
+                          </div>  
+                          <div class="book__ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star-half-alt"></i> 
+                          </div>
+                          <div class="book__price">
+                            <span class="book__price--normal">$59.95</span>
+                            $14.95
+                          </div>
+                        </div>
 
-                </div>
-            </dic>
-        </section>
-
-        <section id="recent">
-            <div class="container">
-                <div class="row">
-
-                </div>
-            </div>
-        </section>
-
-
-        <div class="books">
-            <div class="book">
-                <figure class="book__img--wrapper">
-                    <img class="book__img" src="./assets/crack the coding interview.png" alt>
-                </figure>>
-                <div class="book__ratings"></div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <div class="book__price"></div>
-                <span class="book__price--normal"></span>
-                " $14.95 "
-            </div>
-        </div>
         <div class="book">
             <figure class="book__img--wrapper">
-                <img class="book__img" src="./assets/atomic habits.jpg" alt>
+                <img class="book__img" src="./assets/atomic habits.jpg" alt="">
             </figure>
             <div class="book__title">Atomic Habits</div>
             <div class="book__ratings">
@@ -136,7 +144,7 @@
         </div>
         <div class="book">
             <figure class="book__img--wrapper">
-                <img class="book__img" src="./assets/david goggins.jpeg" alt>
+                <img class="book__img" src="./assets/david goggins.jpeg" alt="">
             </figure>
             <div class="book__title"> Can't Hurt Me</div>
             <div class="book__ratings">
@@ -156,7 +164,8 @@
             <figure class="book__img--wrapper">
                 <img class="book__img" src="./assets/deep work.jpeg" alt>
             </figure>
-            <div class="book__title">Deep Work </div>
+            <div class="book__title">Deep Work 
+            </div>
             <div class="book__ratings">
                 <i class="book__ratings">
                     <i class="fas fa-star"></i>
@@ -179,13 +188,13 @@
             <div class="container">
                 <div class="row">
                     <h2 class="section__title">
-                        "Featured"
+                        Latest
                         <span class="purple">Books</span>
                     </h2>
                     <div class="books">
-                        <div class="books">
+                        <div class="book">
                             <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/book-1.jpeg" alt>
+                                <img class="book__img" src="./assets/book-1.jpeg" alt="The 10X Rule">
                             </figure>
                             <div class="book__title"> The 10X Rule
                             </div>
@@ -203,8 +212,11 @@
                             </div>
                         </div>
                         <div class="book">
-                            <figure class="book__img--wrapper"></figure>
-                            <div class="book__title">Be Obsessed Or Be Average</div>
+                            <figure class="book__img--wrapper">
+                                <img class="book__img" src="./assets/book-2.jpeg" alt="Be Obsessed Or Be Average">
+                            </figure>
+                            <div class="book__title">Be Obsessed Or Be Average
+                            </div>
                             <div class="book__ratings">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -325,11 +337,12 @@
                 </div>
             </div>
         </section>
+
         <section id="explore">
             <div class="container">
                 <div class="row row__column">
                     <h2>
-                        "Explore more"
+                        Explore more
                         <span class="purple">Books</span>
                     </h2>
                     <a href="#features">
